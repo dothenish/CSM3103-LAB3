@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Book Details</title>
+  </head>
+  <body>
+    <h1>Book Details</h1>
+    <p id="bookName"></p>
+    <p id="authorName"></p>
+    <p id="price"></p>
+
+    <script>
+      function Book(bookName, authorName) {
+        this.bookName = bookName;
+        this.authorName = authorName;
+      }
+
+      Book.prototype.price = 10;
+
+      const book = new Book("Future Crimes", "Marc Goodman");
+
+      const bookNameElem = document.getElementById("bookName");
+      bookNameElem.innerText = `Book Name: ${book.bookName}`;
+
+      const authorNameElem = document.getElementById("authorName");
+      authorNameElem.innerText = `Author Name: ${book.authorName}`;
+
+      const priceElem = document.getElementById("price");
+      priceElem.innerText = `Price: RM${book.price.toFixed(2)}`;
+    </script>
+  </body>
+
+  <footer>&copy; - Nisha Farhani 2023</footer>
+</html>
